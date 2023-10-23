@@ -3,7 +3,6 @@ package ServiceImpl;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.sql.Connection;
-import java.util.List;
 
 import DAO.BookDAO;
 import Entities.Books;
