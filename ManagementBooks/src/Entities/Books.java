@@ -11,6 +11,9 @@ public class Books implements Serializable {
         this.author = author;
     }
 
+    public Books(String bookId, String title, String author2) {
+    }
+
     public String getTitle() {
         return title;
     }
@@ -33,5 +36,9 @@ public class Books implements Serializable {
                 "title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 '}';
+    }
+
+    public String getBookId() {
+        return null;
     }
 }
