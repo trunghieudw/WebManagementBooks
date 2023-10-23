@@ -3,6 +3,11 @@ package ServiceImpl;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import DAO.BookDAO;
 import Entities.Books;
@@ -15,8 +20,6 @@ public class BookServiceImpl extends UnicastRemoteObject implements BookService 
         super();
         bookDAO = new BookDAO(connection);
     }
-
-
 
     @Override
     public boolean addBook(Books book) throws RemoteException {
@@ -36,6 +39,11 @@ public class BookServiceImpl extends UnicastRemoteObject implements BookService 
     @Override
     public Books getBook(String bookId) throws RemoteException {
         return bookDAO.getBook(bookId);
+    }
+
+    @Override
+    public List<Books> getAllBooks() throws RemoteException {
+        return bookDAO.getAllBooks();
     }
 
 }
