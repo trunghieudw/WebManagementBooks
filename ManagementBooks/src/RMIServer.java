@@ -1,9 +1,11 @@
-import Service.LibraryService;
-import Service.ManagementService;
-
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
+
+import ServiceImpl.LibraryServiceImpl;
+import ServiceImpl.ManagementServiceImpl;
+import Services.LibraryService;
+import Services.ManagementService;
 
 public class RMIServer {
 
